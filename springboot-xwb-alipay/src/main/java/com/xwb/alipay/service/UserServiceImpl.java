@@ -1,7 +1,7 @@
 package com.xwb.alipay.service;
 
-import com.vbao.alipay.mapper.UserMapper;
-import com.vbao.alipay.model.User;
+import com.xwb.alipay.mapper.UserMapper;
+import com.xwb.alipay.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

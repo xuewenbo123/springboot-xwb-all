@@ -1,8 +1,8 @@
 package com.xwb.alipay.controller;
 
-import com.vbao.alipay.model.User;
-import com.vbao.alipay.service.UserService;
-import com.vbao.alipay.utils.ListUtil;
+import com.xwb.alipay.model.User;
+import com.xwb.alipay.service.UserService;
+import com.xwb.alipay.utils.ListUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

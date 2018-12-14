@@ -1,8 +1,7 @@
 package com.xwb.alipay.model;
 
-import org.apache.ibatis.base.domain.BaseIdDomain;
 
-public class User extends BaseIdDomain {
+public class User{
 
     private Long id;
 

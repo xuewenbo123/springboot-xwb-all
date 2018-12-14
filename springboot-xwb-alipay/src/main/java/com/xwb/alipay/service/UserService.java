@@ -1,6 +1,8 @@
 package com.xwb.alipay.service;
 
-import com.vbao.alipay.model.User;
+
+
+import com.xwb.alipay.model.User;
 
 import java.util.List;
 

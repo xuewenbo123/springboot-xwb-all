@@ -1,5 +1,8 @@
 package com.xwb.queue.common;
-
+/**
+ * @Description message
+ * @Author Mr.Xue
+ */
 public class RabbitmqMessage {
 
     private long id;

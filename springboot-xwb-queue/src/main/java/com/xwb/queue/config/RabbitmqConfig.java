@@ -9,6 +9,10 @@ import org.springframework.core.io.Resource;
 import java.io.IOException;
 import java.util.Properties;
 
+/**
+ * @Description rabbitmq配置类
+ * @Author Mr.Xue
+ */
 @Configuration
 public class RabbitmqConfig {
 

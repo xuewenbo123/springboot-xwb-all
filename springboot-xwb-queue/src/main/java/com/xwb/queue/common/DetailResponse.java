@@ -1,6 +1,9 @@
 package com.xwb.queue.common;
 
-
+/**
+ * @Description 消息发送返回结果类
+ * @Author Mr.Xue
+ */
 public class DetailResponse {
     /**
      * 是否成功

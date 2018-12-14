@@ -1,5 +1,9 @@
 package com.xwb.queue.common;
 
+/**
+ * @Description rabbitmq常量
+ * @Author Mr.Xue
+ */
 public class RabbitConstants {
 
     /**

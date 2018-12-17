@@ -156,6 +156,14 @@
 			<version>1.7.25</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/com.gitee.reger/spring-boot-starter-swagger -->
+		<dependency>
+			<groupId>com.gitee.reger</groupId>
+			<artifactId>spring-boot-starter-swagger</artifactId>
+			<version>1.0.4</version>
+		</dependency>
+
+
 
 
 	</dependencies>

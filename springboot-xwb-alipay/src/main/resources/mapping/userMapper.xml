@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.vbao.alipay.mapper.UserMapper" >
+<mapper namespace="com.xwb.alipay.mapper.UserMapper" >
 
 
-    <select id="selectOne" resultType="com.vbao.alipay.model.User" parameterType="java.lang.Long">
+    <select id="selectOne" resultType="com.xwb.alipay.model.User" parameterType="java.lang.Long">
         select * from user WHERE id = #{id}
     </select>
 
-    <select id="selectAll" resultType="com.vbao.alipay.model.User" >
+    <select id="selectAll" resultType="com.xwb.alipay.model.User" >
         select * from user
     </select>
 
 
-    <insert id="insert" parameterType="com.vbao.alipay.model.User" useGeneratedKeys="true" keyProperty="id"  >
+    <insert id="insert" parameterType="com.xwb.alipay.model.User" useGeneratedKeys="true" keyProperty="id"  >
         INSERT INTO USER
         (name,age)
         values (#{name},#{age})

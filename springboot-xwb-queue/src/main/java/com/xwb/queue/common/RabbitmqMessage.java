@@ -11,6 +11,15 @@ public class RabbitmqMessage {
 
     private Object message;
 
+    public RabbitmqMessage() {
+    }
+
+    public RabbitmqMessage(long id, long time, Object message) {
+        this.id = id;
+        this.time = time;
+        this.message = message;
+    }
+
     public long getId() {
         return id;
     }

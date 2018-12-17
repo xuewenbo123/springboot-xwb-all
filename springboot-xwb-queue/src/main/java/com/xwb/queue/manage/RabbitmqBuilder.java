@@ -52,6 +52,15 @@ public class RabbitmqBuilder {
         channel.exchangeDeclare(exchange, "topic", true, false, null);
     }
 
+    public MessageSender buildDirectMessageSender(final String exchange, final String routingKey, final String queue) throws IOException {
+        return buildMessageSender(exchange, routingKey, queue, "direct");
+    }
+
+    public MessageSender buildTopicMessageSender(final String exchange, final String routingKey) throws IOException {
+        return buildMessageSender(exchange, routingKey, null, "topic");
+    }
+
+
 
     /**
      * buildMessageSender

@@ -63,12 +63,11 @@ public class RabbitmqBuilder {
 
 
     /**
-     * buildMessageSender
+     * 1 构造template, exchange, routingkey等
+     * 2 设置message序列化方法
+     * 3 设置发送确认
+     * 4 构造sender方法
      */
-    //1 构造template, exchange, routingkey等
-    //2 设置message序列化方法
-    //3 设置发送确认
-    //4 构造sender方法
     public MessageSender buildMessageSender(final String exchange, final String routingKey,
                                             final String queue, final String type) throws IOException {
         Connection connection = connectionFactory.createConnection();
@@ -78,16 +77,13 @@ public class RabbitmqBuilder {
         } else if (type.equals("topic")) {
             buildTopic(exchange, connection);
         }
-
         final RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
-
         rabbitTemplate.setMandatory(true);
         rabbitTemplate.setExchange(exchange);
         rabbitTemplate.setRoutingKey(routingKey);
         //2
         rabbitTemplate.setMessageConverter(new Jackson2JsonMessageConverter());
         RetryCache retryCache = new RetryCache();
-
         //3
         rabbitTemplate.setConfirmCallback((correlationData, ack, cause) -> {
             if (!ack) {
@@ -96,7 +92,6 @@ public class RabbitmqBuilder {
                 retryCache.del(Long.valueOf(correlationData.getId()));
             }
         });
-
         rabbitTemplate.setReturnCallback((message, replyCode, replyText, tmpExchange, tmpRoutingKey) -> {
             try {
                 Thread.sleep(RabbitConstants.ONE_SECOND);
@@ -107,13 +102,11 @@ public class RabbitmqBuilder {
             log.info("send message failed: " + replyCode + " " + replyText);
             rabbitTemplate.send(message);
         });
-
         //4
         return new MessageSender() {
             {
                 retryCache.setSender(this);
             }
-
             @Override
             public DetailResponse send(Object message) {
                 long id = retryCache.generateId();

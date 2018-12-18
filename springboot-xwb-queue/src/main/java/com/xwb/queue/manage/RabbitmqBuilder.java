@@ -5,7 +5,6 @@ import com.xwb.queue.common.DetailResponse;
 import com.xwb.queue.common.RabbitConstants;
 import com.xwb.queue.common.RabbitmqMessage;
 import com.xwb.queue.consumer.MessageConsumer;
-import lombok.extern.slf4j.Slf4j;
 import org.apache.log4j.Logger;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.connection.Connection;
@@ -24,7 +23,6 @@ import java.util.concurrent.TimeoutException;
  * @Description rabbitmq的builder类
  * @Author Mr.Xue
  */
-@Slf4j
 public class RabbitmqBuilder {
 
     protected Logger log = Logger.getLogger(RabbitmqBuilder.class);

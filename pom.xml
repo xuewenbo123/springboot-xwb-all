@@ -84,30 +84,9 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 			<version>2.0.5.RELEASE</version>
-			<exclusions>
-				<!-- 切换log4j2日志读取 -->
-				<exclusion>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-starter-logging</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 
-		 <!-- 配置 log4j2 -->
-		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-log4j2 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-log4j2</artifactId>
-			<version>2.0.5.RELEASE</version>
-		</dependency>
 
-		<!-- 加上这个才能辨认到log4j2.yml文件 -->
-		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml -->
-		<dependency>
-			<groupId>com.fasterxml.jackson.dataformat</groupId>
-			<artifactId>jackson-dataformat-yaml</artifactId>
-			<version>2.9.6</version>
-		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
 		<dependency>
@@ -180,27 +159,27 @@
 	</dependencies>
 
 
-	<build>
-		<defaultGoal>compile</defaultGoal>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.6.0</version>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-					<encoding>${project.build.sourceEncoding}</encoding>
-					<compilerArguments>
-						<verbose />
-						<bootclasspath>${java.home}/lib/rt.jar;${java.home}/lib/jce.jar</bootclasspath>
-					</compilerArguments>
-					<!-- 打包成可直接运行的jar -->
-					<executable>true</executable>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+	<!--<build>-->
+		<!--<defaultGoal>compile</defaultGoal>-->
+		<!--<plugins>-->
+			<!--<plugin>-->
+				<!--<groupId>org.apache.maven.plugins</groupId>-->
+				<!--<artifactId>maven-compiler-plugin</artifactId>-->
+				<!--<version>3.6.0</version>-->
+				<!--<configuration>-->
+					<!--<source>1.8</source>-->
+					<!--<target>1.8</target>-->
+					<!--<encoding>${project.build.sourceEncoding}</encoding>-->
+					<!--<compilerArguments>-->
+						<!--<verbose />-->
+						<!--<bootclasspath>${java.home}/lib/rt.jar;${java.home}/lib/jce.jar</bootclasspath>-->
+					<!--</compilerArguments>-->
+					<!--&lt;!&ndash; 打包成可直接运行的jar &ndash;&gt;-->
+					<!--<executable>true</executable>-->
+				<!--</configuration>-->
+			<!--</plugin>-->
+		<!--</plugins>-->
+	<!--</build>-->
 
 
 

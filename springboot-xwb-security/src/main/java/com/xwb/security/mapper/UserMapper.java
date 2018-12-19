@@ -1,12 +1,10 @@
-package com.xwb.alipay.service;
+package com.xwb.security.mapper;
 
-
-
-import com.xwb.alipay.model.User;
+import com.xwb.security.model.User;
 
 import java.util.List;
 
-public interface UserService {
+public interface UserMapper {
 
     User selectOne(Long id);
 

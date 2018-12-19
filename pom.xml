@@ -24,6 +24,7 @@
 		<module>springboot-xwb-web</module>
 		<module>springboot-xwb-api</module>
 		<module>springboot-xwb-queue</module>
+		<module>springboot-xwb-security</module>
 	</modules>
 
 

@@ -12,5 +12,7 @@ public interface UserMapper {
 
     Long insert(User user);
 
+    User findByUsername(String name);
+
 
 }

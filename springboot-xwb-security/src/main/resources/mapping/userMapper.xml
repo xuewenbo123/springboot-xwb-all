@@ -12,6 +12,11 @@
     </select>
 
 
+    <select id="findByUsername" resultType="com.xwb.security.model.User" parameterType="java.lang.String">
+        select * from user where user.name = #{name}
+    </select>
+
+
     <insert id="insert" parameterType="com.xwb.security.model.User" useGeneratedKeys="true" keyProperty="id"  >
         INSERT INTO USER
         (name,age)

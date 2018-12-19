@@ -26,6 +26,8 @@ public class User implements Serializable{
 
     String imageUrl;
 
+    private String role;
+
     UserStatus status;
 
     public Long getId() {
@@ -90,6 +92,14 @@ public class User implements Serializable{
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 
     public UserStatus getStatus() {

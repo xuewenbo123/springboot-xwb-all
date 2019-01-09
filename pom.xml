@@ -25,6 +25,7 @@
 		<module>springboot-xwb-api</module>
 		<module>springboot-xwb-queue</module>
 		<module>springboot-xwb-security</module>
+		<module>springboot-xwb-job</module>
 	</modules>
 
 
@@ -149,6 +150,20 @@
 			<version>1.0.4</version>
 		</dependency>
 
+
+		<!-- 生成图片验证码 -->
+		<dependency>
+			<groupId>com.github.penggle</groupId>
+			<artifactId>kaptcha</artifactId>
+			<version>2.3.2</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.google.zxing/core 生成二维码 -->
+		<dependency>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>core</artifactId>
+			<version>3.3.0</version>
+		</dependency>
 
 
 	</dependencies>

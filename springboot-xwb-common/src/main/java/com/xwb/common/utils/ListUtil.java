@@ -1,4 +1,4 @@
-package com.xwb.alipay.utils;
+package com.xwb.common.utils;
 
 import java.beans.PropertyDescriptor;
 import java.lang.reflect.Method;

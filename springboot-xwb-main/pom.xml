@@ -33,13 +33,6 @@
 			<scope>test</scope>
 		</dependency>
 
-
-		<dependency>
-			<groupId>com.xwb</groupId>
-			<artifactId>springboot-xwb-web</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-
 		<dependency>
 			<groupId>com.xwb</groupId>
 			<artifactId>springboot-xwb-common</artifactId>
@@ -58,11 +51,11 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
-		<!--<dependency>-->
-			<!--<groupId>com.xwb.web</groupId>-->
-			<!--<artifactId>springboot-xwb-web</artifactId>-->
-			<!--<version>0.0.1-SNAPSHOT</version>-->
-		<!--</dependency>-->
+		<dependency>
+			<groupId>com.xwb.job</groupId>
+			<artifactId>springboot-xwb-job</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 
 	</dependencies>
 

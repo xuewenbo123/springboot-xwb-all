@@ -2,13 +2,24 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.xwb.job.mapper.MailJobMapper" >
 
+    <resultMap id="mailResultMap" type="com.xwb.job.model.MailJob"  autoMapping="true">
+        <!-- 用id属性来映射主键字段 -->
+        <id property="id" column="id"/>
+        <!-- 用result属性来映射非主键字段 -->
+        <result property="sendFrom" column="send_from"/>
+        <result property="sendTo" column="send_to"/>
+        <result property="createdTime" column="created_time"/>
+        <result property="updatedTime" column="updated_time"/>
+    </resultMap>
 
-    <select id="selectOne" resultType="com.xwb.job.model.MailJob" parameterType="java.lang.Long">
+
+
+    <select id="selectOne" resultMap="mailResultMap" parameterType="java.lang.Long">
         select * from mail_job WHERE id = #{id}
     </select>
 
 
-    <select id="selectAll" resultType="com.xwb.job.model.MailJob" >
+    <select id="selectAll" resultMap="mailResultMap" >
         select * from mail_job
     </select>
 

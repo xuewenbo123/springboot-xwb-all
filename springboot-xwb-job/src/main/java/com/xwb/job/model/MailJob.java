@@ -1,7 +1,6 @@
 package com.xwb.job.model;
 
 import com.xwb.job.type.JobStatus;
-
 import java.io.Serializable;
 import java.util.Date;
 
@@ -9,15 +8,20 @@ public class MailJob implements Serializable {
 
     Long id;
 
-    String sender;
+    String sendFrom;
 
-    String target;
+    String sendTo;
+
+    String subject;
+
+    String text;
 
     JobStatus status;
 
     Date createdTime;
 
     Date updatedTime;
+
 
     public Long getId() {
         return id;
@@ -27,20 +31,36 @@ public class MailJob implements Serializable {
         this.id = id;
     }
 
-    public String getSender() {
-        return sender;
+    public String getSendFrom() {
+        return sendFrom;
     }
 
-    public void setSender(String sender) {
-        this.sender = sender;
+    public void setSendFrom(String sendFrom) {
+        this.sendFrom = sendFrom;
     }
 
-    public String getTarget() {
-        return target;
+    public String getSendTo() {
+        return sendTo;
     }
 
-    public void setTarget(String target) {
-        this.target = target;
+    public void setSendTo(String sendTo) {
+        this.sendTo = sendTo;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
     }
 
     public JobStatus getStatus() {

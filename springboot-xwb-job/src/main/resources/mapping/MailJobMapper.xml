@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xwb.job.mapper.MailJobMapper" >
+
+
+    <select id="selectOne" resultType="com.xwb.job.model.MailJob" parameterType="java.lang.Long">
+        select * from mail_job WHERE id = #{id}
+    </select>
+
+
+    <select id="selectAll" resultType="com.xwb.job.model.MailJob" >
+        select * from mail_job
+    </select>
+
+
+
+</mapper>

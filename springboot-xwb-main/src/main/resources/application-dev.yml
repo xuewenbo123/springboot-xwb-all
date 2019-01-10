@@ -35,7 +35,7 @@ mybatis:
 
 
 regCenter:
-  serverList: localhost:6181
+  serverList: localhost:2181
   namespace: elastic-job-lite-springboot
 
 simpleJob:

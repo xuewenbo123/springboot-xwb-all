@@ -19,13 +19,13 @@ package com.xwb.job.dataflow;
 
 import com.dangdang.ddframe.job.api.ShardingContext;
 import com.dangdang.ddframe.job.api.dataflow.DataflowJob;
-import com.dangdang.ddframe.job.example.fixture.entity.Foo;
-import com.dangdang.ddframe.job.example.fixture.repository.FooRepository;
-
+import com.xwb.job.model.Foo;
+import com.xwb.job.repository.FooRepository;
 import javax.annotation.Resource;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+
 
 public class SpringDataflowJob implements DataflowJob<Foo> {
     

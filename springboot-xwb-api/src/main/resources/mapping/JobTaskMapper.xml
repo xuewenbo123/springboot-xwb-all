@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xwb.api.mapper.JobTaskMapper" >
+
+    <resultMap id="jobResultMap" type="com.xwb.api.model.JobTask"  autoMapping="true">
+        <!-- 用id属性来映射主键字段 -->
+        <id property="id" column="id"/>
+        <!-- 用result属性来映射非主键字段 -->
+        <result property="sendTime" column="send_time"/>
+        <result property="content" column="content"/>
+        <result property="status" column="status"/>
+    </resultMap>
+
+
+
+    <select id="selectOne" resultMap="jobResultMap" parameterType="java.lang.Long">
+        select * from job_task WHERE id = #{id}
+    </select>
+
+
+    <select id="selectByStatus" resultMap="jobResultMap">
+        SELECT * FROM job_task
+        WHERE 1=1
+        <if test="status != null">
+            AND job_task.status = #{status}
+        </if>
+    </select>
+
+
+
+    <select id="selectAll" resultMap="jobResultMap" >
+        SELECT * FROM job_task
+        WHERE 1=1
+        <if test="jobTask != null">
+            <if test="jobTask.status != null">
+                AND job_task.status=#{jobTask.status}
+            </if>
+            <if test="jobTask.id != null">
+                AND job_task.id=#{jobTask.id}
+            </if>
+            <if test="jobTask.content != null">
+                AND job_task.content=#{jobTask.content}
+            </if>
+            <if test="jobTask.sendTime != null">
+                AND job_task.send_time=#{jobTask.sendTime}
+            </if>
+        </if>
+    </select>
+
+
+    <insert id="save"  parameterType="com.xwb.api.model.JobTask" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO job_task (id,content,status,send_time)
+        VALUES
+        (#{jobTask.id},#{jobTask.content},#{jobTask.status},#{jobTask.sendTime})
+    </insert>
+
+
+   <update id="updateById" parameterType="com.xwb.api.model.JobTask">
+       UPDATE job_task
+       <set>
+           <if test="jobTask != null">
+               <if test="jobTask.status != null">
+                   job_task.status=#{jobTask.status},
+               </if>
+               <if test="jobTask.content != null">
+                   job_task.content=#{jobTask.content},
+               </if>
+               <if test="jobTask.sendTime != null">
+                   job_task.send_time=#{jobTask.sendTime},
+               </if>
+           </if>
+       </set>
+       WHERE job_task.id=#{jobTask.id}
+   </update>
+
+
+
+</mapper>
